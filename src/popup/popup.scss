@@ -1,0 +1,60 @@
+@import "../style/base";
+//通用结束
+
+main {
+  width: 270px;
+  padding: 0 14px 14px 14px;
+  font-size: 1em;
+  overflow: hidden;
+
+  .close-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 18px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    &:hover{
+      background-color: #aaaaaa;
+      border-radius: 50%;
+    }
+  }
+
+  .action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .right{
+      display: flex;
+      justify-content: right;
+      align-items: center;
+    }
+  }
+
+  .content{
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0;
+    label{
+      display: flex;
+      align-items: center;
+      input{
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+      }
+      .icon{
+        width: 20px;
+        height: 20px;
+      }
+      .icon-error{
+        color: var(--error-text);
+      }
+      .icon-success{
+        color: var(--green-70);
+      }
+    }
+  }
+}
