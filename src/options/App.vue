@@ -14,7 +14,7 @@
       <div class="footer">
         <img alt="help"
              src="/icons/help.png">
-        <a href="#">
+        <a href="https://itdashu.com/web_extension/reprint.html">
           {{ lang('extDocument') }}
         </a>
       </div>

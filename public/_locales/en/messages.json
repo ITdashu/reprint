@@ -1,0 +1,113 @@
+{
+  "extName": {
+    "message": "Reprint"
+  },
+  "extDescription": {
+    "message": "Reprint the article anywhere"
+  },
+  "extDocument": {
+    "message": "Technical documents"
+  },
+  "config": {
+    "message": "Set up"
+  },
+  "configDescription": {
+    "message": "Reprint can automatically extract the body of a web page and publish it to any place you allow. <br\/>In addition to the settings here, you should also configure the server-side publishing interface, see: <a href=\"https:\/\/itdashu.com\/web_extension\/reprint.html\" target=\"_blank\">Common software publishing Plug-in and custom publishing interface docking document<\/a>"
+  },
+  "sync": {
+    "message": "Synchronize:"
+  },
+  "alreadySync": {
+    "message": "Enable sync"
+  },
+  "enable": {
+    "message": "activated"
+  },
+  "syncDescription": {
+    "message": "Please note: You need to log in in the Chrome browser on all devices (including this device) so that the sync options can be used normally. <br\/>You can view this page on other devices to check whether the synchronization takes effect."
+  },
+  "releaseConfig": {
+    "message": "Publish configuration"
+  },
+  "releaseDescription": {
+    "message": "You should provide an interface for users to accept the Reprint request and perform the save operation. <br\/>See: <a href=\"https:\/\/itdashu.com\/web_extension\/reprint.html\">Commonly used software publishing plug-ins or custom publishing interface docking documents<\/a>"
+  },
+  "inputName": {
+    "message": "Please enter a name"
+  },
+  "inputRun": {
+    "message": "saving..."
+  },
+  "alreadySave": {
+    "message": "Saved"
+  },
+  "TestAndSave": {
+    "message": "Test and save"
+  },
+  "defaultRelease": {
+    "message": "Default release"
+  },
+  "releaseUrl": {
+    "message": "Publish address"
+  },
+  "releasePlaceholder": {
+    "message": "Please enter the publishing address, such as: https:\/\/itdashu.com.."
+  },
+  "releaseAuth": {
+    "message": "AUTH authentication string"
+  },
+  "releaseAuthPlaceholder": {
+    "message": "Please enter the authentication string"
+  },
+  "otherParams": {
+    "message": "Extra parameters"
+  },
+  "otherParamsPlaceholder": {
+    "message": "Please enter the json string"
+  },
+  "releaseTip": {
+    "message": "In order to prevent abuse, the newly added configuration must be checked and saved after passing the test. Issue interface verification instructions"
+  },
+  "delete": {
+    "message": "delete"
+  },
+  "releaseAdd": {
+    "message": "Add release configuration"
+  },
+  "history": {
+    "message": "Error history"
+  },
+  "historyDescription": {
+    "message": "Records that failed to publish in use will appear here. <br\/>There are only 20 records kept here, and when you click on an entry in the release list, the entry will be deleted from the list."
+  },
+  "browserPage": {
+    "message": "Visit this page"
+  },
+  "releaseTo": {
+    "message": "Publish to"
+  },
+  "releaseToError": {
+    "message": "failure"
+  },
+  "releaseUrlResponseError": {
+    "message": "The interface response is illegal, the interface needs to return a json object, and contains the code and msg fields"
+  },
+  "releaseUrlTestError": {
+    "message": "Request to publish the interface failed. Please check the network or the interface server is abnormal"
+  },
+  "reprintTo": {
+    "message": "Reprinted to:"
+  },
+  "reprint": {
+    "message": "Reprint"
+  },
+  "reprintRun": {
+    "message": "Reprinting..."
+  },
+  "moreOptions": {
+    "message": "More options"
+  },
+  "reward": {
+    "message": "Reward"
+  }
+}
