@@ -67,24 +67,25 @@ class ReprintSend {
             console.log('转载成功')
           });
         } else {
-          this.error(id,postData.url, code, msg)
+          this.error(id,postData, code, msg,config)
         }
       }else {
         console.log('接口不符合规范')
-        this.error(id,postData.url, 5000, '发布接口异常')
+        this.error(id,postData, 5000, '发布接口异常',config)
       }
     }).catch(() => {
       console.log('发布失败')
-      this.error(id,postData.url, 4000, '网络或发布接口配置错误')
+      this.error(id,postData, 4000, '网络或发布接口配置错误',config)
     })
   }
 
-  error(id,url, code, msg) {
+  error(id,postData, code, msg,config) {
     browser.storage.local.get(this.historyKey).then(data => {
       browser.runtime.sendMessage({
         action: 'reprintError',
         id: id,
-        url: url
+        configName:config.name,
+        url: postData.url
       }).then(() => {})
 
       if (data.hasOwnProperty(this.historyKey)) {
@@ -98,18 +99,22 @@ class ReprintSend {
         data.pop()
       }
       data.splice(0,0,{
-        code, msg,url,
+        code, msg,
+        url:postData.url,
+        title: postData.title,
+        configName:config.name,
         time: (new Date()).toLocaleString()
       })
       let output = {}
-      output[this.historyKey] = JSON.stringify(output)
+      output[this.historyKey] = JSON.stringify(data)
+      console.log('即将要保存的数据',output)
       browser.storage.local.set(output).then(() => {
         browser.runtime.sendMessage({
           action: 'notifications',
           type: "basic",
           icon: browser.extension.getURL("/icons/logo.svg"),
           title: '发布失败',
-          message: '已记录至失败记录日志，请至插件配置页面查看'
+          message: '已记录至'+config.name+'失败，已记录日志，请至插件配置页面查看'
         }).then(() =>{})
       })
     })

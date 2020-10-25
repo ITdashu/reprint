@@ -1,0 +1,113 @@
+{
+  "extName": {
+    "message": "Abdruck"
+  },
+  "extDescription": {
+    "message": "Drucken Sie den Artikel überall nach"
+  },
+  "extDocument": {
+    "message": "Technische Dokumente"
+  },
+  "config": {
+    "message": "Konfiguration"
+  },
+  "configDescription": {
+    "message": "Durch Nachdruck kann der Text einer Webseite automatisch extrahiert und an einem beliebigen Ort veröffentlicht werden. <br\/> Zusätzlich zu den Einstellungen hier sollten Sie auch die Server-Veröffentlichungsoberfläche konfigurieren, siehe: <a href=\"https:\/\/itdashu.com\/web_extension\/reprint.html\" target=\"_blank\"> Allgemeines Software-Publishing Docking-Dokument für Plug-In und benutzerdefinierte Veröffentlichungsschnittstelle <\/a>"
+  },
+  "sync": {
+    "message": "Synchronisieren:"
+  },
+  "alreadySync": {
+    "message": "Aktivieren Sie die Synchronisierung"
+  },
+  "enable": {
+    "message": "aktiviert"
+  },
+  "syncDescription": {
+    "message": "Bitte beachten Sie: Sie müssen sich auf allen Geräten (einschließlich dieses Geräts) beim Chrome-Browser anmelden, damit die Synchronisierungsoptionen normal verwendet werden können. <br\/> Sie können diese Seite auf anderen Geräten anzeigen, um zu überprüfen, ob die Synchronisierung wirksam wird."
+  },
+  "releaseConfig": {
+    "message": "Konfiguration veröffentlichen"
+  },
+  "releaseDescription": {
+    "message": "Sie sollten eine Schnittstelle bereitstellen, über die Benutzer die Anforderung zum erneuten Drucken annehmen und den Speichervorgang ausführen können. <br\/> Siehe: <a href=\"https:\/\/itdashu.com\/web_extension\/reprint.html\"> Häufig verwendete Software-Publishing-Plug-Ins oder Docking-Dokumente für benutzerdefinierte Publishing-Schnittstellen <\/a>"
+  },
+  "inputName": {
+    "message": "Bitte geben Sie einen Namen ein"
+  },
+  "inputRun": {
+    "message": "Sparen ..."
+  },
+  "alreadySave": {
+    "message": "Gerettet"
+  },
+  "TestAndSave": {
+    "message": "Testen und speichern"
+  },
+  "defaultRelease": {
+    "message": "Standardversion"
+  },
+  "releaseUrl": {
+    "message": "Adresse veröffentlichen"
+  },
+  "releasePlaceholder": {
+    "message": "Bitte geben Sie die Veröffentlichungsadresse ein, z. B.: Https:\/\/itdashu.com."
+  },
+  "releaseAuth": {
+    "message": "AUTH-Authentifizierungszeichenfolge"
+  },
+  "releaseAuthPlaceholder": {
+    "message": "Bitte geben Sie die Authentifizierungszeichenfolge ein"
+  },
+  "otherParams": {
+    "message": "Zusätzliche Parameter"
+  },
+  "otherParamsPlaceholder": {
+    "message": "Bitte geben Sie die JSON-Zeichenfolge ein"
+  },
+  "releaseTip": {
+    "message": "Um Missbrauch zu verhindern, muss die neu hinzugefügte Konfiguration nach Bestehen des Tests überprüft und gespeichert werden. Anweisungen zur Überprüfung der Schnittstelle freigeben"
+  },
+  "delete": {
+    "message": "löschen"
+  },
+  "releaseAdd": {
+    "message": "Release-Konfiguration hinzufügen"
+  },
+  "history": {
+    "message": "Fehlerhistorie"
+  },
+  "historyDescription": {
+    "message": "Datensätze, die nicht in Verwendung veröffentlicht wurden, werden hier angezeigt. <br\/> Es werden nur 20 Datensätze geführt. Wenn Sie auf das Element in der Versionsliste klicken, wird das Element aus der Liste gelöscht."
+  },
+  "browserPage": {
+    "message": "Besuchen Sie diese Seite"
+  },
+  "releaseTo": {
+    "message": "Veröffentlichen in"
+  },
+  "releaseToError": {
+    "message": "Fehler"
+  },
+  "releaseUrlResponseError": {
+    "message": "Die Schnittstellenantwort ist unzulässig, die Schnittstelle muss ein JSON-Objekt zurückgeben und enthält die Felder Code und Nachricht"
+  },
+  "releaseUrlTestError": {
+    "message": "Die Anforderung zum Veröffentlichen der Schnittstelle ist fehlgeschlagen. Überprüfen Sie das Netzwerk, oder der Schnittstellenserver ist abnormal"
+  },
+  "reprintTo": {
+    "message": "Nachdruck an:"
+  },
+  "reprint": {
+    "message": "Abdruck"
+  },
+  "reprintRun": {
+    "message": "Nachdruck..."
+  },
+  "moreOptions": {
+    "message": "Mehr Optionen"
+  },
+  "reward": {
+    "message": "Belohnung"
+  }
+}

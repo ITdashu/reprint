@@ -1,0 +1,113 @@
+{
+  "extName": {
+    "message": "Reimprimir"
+  },
+  "extDescription": {
+    "message": "Reimprime el artículo en cualquier lugar"
+  },
+  "extDocument": {
+    "message": "Documentos técnicos"
+  },
+  "config": {
+    "message": "Preparar"
+  },
+  "configDescription": {
+    "message": "La reimpresión puede extraer automáticamente el cuerpo de una página web y publicarla en cualquier lugar que permita. <br\/> Además de la configuración aquí, también debe configurar la interfaz de publicación del lado del servidor, consulte: <a href=\"https:\/\/itdashu.com\/web_extension\/reprint.html\" target=\"_blank\"> Publicación de software común Complemento y documento de acoplamiento de interfaz de publicación personalizada <\/a>"
+  },
+  "sync": {
+    "message": "Sincronizar:"
+  },
+  "alreadySync": {
+    "message": "Habilitar sincronización"
+  },
+  "enable": {
+    "message": "activado"
+  },
+  "syncDescription": {
+    "message": "Tenga en cuenta: debe iniciar sesión en el navegador Chrome en todos los dispositivos (incluido este dispositivo) para que las opciones de sincronización se puedan utilizar normalmente. <br\/> Puede ver esta página en otros dispositivos para comprobar si la sincronización tiene efecto."
+  },
+  "releaseConfig": {
+    "message": "Publicar configuración"
+  },
+  "releaseDescription": {
+    "message": "Debe proporcionar una interfaz para que los usuarios acepten solicitudes de reimpresión y realicen operaciones de guardado. <br\/> Consulte: <a href=\"https:\/\/itdashu.com\/web_extension\/reprint.html\"> Complementos de publicación de software de uso común o documentos de acoplamiento de interfaz de publicación personalizada <\/a>"
+  },
+  "inputName": {
+    "message": "Por favor ingrese un nombre"
+  },
+  "inputRun": {
+    "message": "ahorro..."
+  },
+  "alreadySave": {
+    "message": "Salvado"
+  },
+  "TestAndSave": {
+    "message": "Prueba y guarda"
+  },
+  "defaultRelease": {
+    "message": "Lanzamiento predeterminado"
+  },
+  "releaseUrl": {
+    "message": "Publicar dirección"
+  },
+  "releasePlaceholder": {
+    "message": "Ingrese la dirección de publicación, como: https:\/\/itdashu.com .."
+  },
+  "releaseAuth": {
+    "message": "Cadena de autenticación AUTH"
+  },
+  "releaseAuthPlaceholder": {
+    "message": "Ingrese la cadena de autenticación"
+  },
+  "otherParams": {
+    "message": "Parámetros extra"
+  },
+  "otherParamsPlaceholder": {
+    "message": "Ingrese la cadena json"
+  },
+  "releaseTip": {
+    "message": "Para evitar abusos, la configuración recién agregada debe verificarse y guardarse después de pasar la prueba. Liberar las instrucciones de verificación de la interfaz"
+  },
+  "delete": {
+    "message": "Eliminar"
+  },
+  "releaseAdd": {
+    "message": "Agregar configuración de lanzamiento"
+  },
+  "history": {
+    "message": "Historial de errores"
+  },
+  "historyDescription": {
+    "message": "Los registros que no se pudieron publicar en uso aparecerán aquí. <br\/> Solo se guardan 20 registros, y cuando hace clic en el elemento en la lista de versiones, el elemento se eliminará de la lista."
+  },
+  "browserPage": {
+    "message": "Visita esta pagina"
+  },
+  "releaseTo": {
+    "message": "Publicar en"
+  },
+  "releaseToError": {
+    "message": "fracaso"
+  },
+  "releaseUrlResponseError": {
+    "message": "La respuesta de la interfaz es ilegal, la interfaz debe devolver un objeto json y contiene los campos de código y msg"
+  },
+  "releaseUrlTestError": {
+    "message": "La solicitud para publicar la interfaz falló, verifique la red o el servidor de la interfaz es anormal"
+  },
+  "reprintTo": {
+    "message": "Reimpreso a:"
+  },
+  "reprint": {
+    "message": "Reimprimir"
+  },
+  "reprintRun": {
+    "message": "Reimpresión ..."
+  },
+  "moreOptions": {
+    "message": "Mas opciones"
+  },
+  "reward": {
+    "message": "Recompensa"
+  }
+}

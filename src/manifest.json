@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "__MSG_extName__",
   "homepage_url": "http://localhost:8080/",
-  "description": "A Vue Browser Extension",
+  "description": "__MSG_extDescription__",
   "default_locale": "en",
   "permissions": [
     "activeTab",
@@ -14,9 +14,10 @@
     "notifications"
   ],
   "icons": {
-    "32": "icons/reprint-32.png",
-    "64": "icons/reprint-64.png",
-    "128": "icons/reprint-128.png"
+    "16": "icons/logo.svg",
+    "32": "icons/logo.svg",
+    "64": "icons/logo.svg",
+    "128": "icons/logo.svg"
   },
   "content_scripts": [
     {
@@ -38,24 +39,12 @@
   "browser_action": {
     "default_popup": "popup.html",
     "default_title": "__MSG_extName__",
-    "default_icon": {
-      "32": "icons/reprint-32.png",
-      "64": "icons/reprint-64.png"
-    }
-  },
-  "page_action": {
-    "browser_style": true,
-    "default_icon": "icons/reprint-32.png",
-    "default_title": "reprint",
-    "default_popup": "popup.html"
+    "default_icon": "icons/logo.svg"
   },
   "options_ui": {
     "page": "options.html",
     "open_in_tab": false,
     "browser_style": false,
     "chrome_style": false
-  },
-  "chrome_url_overrides": {
-    "newtab": "override.html"
   }
 }

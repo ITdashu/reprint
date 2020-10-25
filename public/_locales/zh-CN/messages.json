@@ -1,0 +1,113 @@
+{
+  "extName": {
+    "message": "Reprint"
+  },
+  "extDescription": {
+    "message": "转载文章到任何地方"
+  },
+  "extDocument": {
+    "message": "技术文档"
+  },
+  "config": {
+    "message": "设置"
+  },
+  "configDescription": {
+    "message": "Reprint可以自动提取网页正文，并发布到您允许的任何地方。<br\/>除了此处的设置，您还应该配置好服务端的发布接口，参看：<a href=\"https:\/\/itdashu.com\/web_extension\/reprint.html\" target=\"_blank\">常用软件发布插件和自定义发布接口对接文档<\/a>"
+  },
+  "sync": {
+    "message": "同步："
+  },
+  "alreadySync": {
+    "message": "启用同步"
+  },
+  "enable": {
+    "message": "已启用"
+  },
+  "syncDescription": {
+    "message": "请注意：您需要在所有设备上（包括此设备）的Chrome浏览器中登录，这样同步的选项才能正常使用。<br\/>可以在其他设备上查看此页面，来检查同步是否生效。"
+  },
+  "releaseConfig": {
+    "message": "发布配置"
+  },
+  "releaseDescription": {
+    "message": "您应该提供一个接口用户接受Reprint发起请求，执行保存操作。<br\/>参看：<a href=\"https:\/\/itdashu.com\/web_extension\/reprint.html\">常用软件发布插件或自定义发布接口对接文档<\/a>"
+  },
+  "inputName": {
+    "message": "请输入名称"
+  },
+  "inputRun": {
+    "message": "保存中..."
+  },
+  "alreadySave": {
+    "message": "已保存"
+  },
+  "TestAndSave": {
+    "message": "测试并保存"
+  },
+  "defaultRelease": {
+    "message": "默认发布"
+  },
+  "releaseUrl": {
+    "message": "发布地址"
+  },
+  "releasePlaceholder": {
+    "message": "请输入发布地址，如：https:\/\/itdashu.com.."
+  },
+  "releaseAuth": {
+    "message": "AUTH 认证字符串"
+  },
+  "releaseAuthPlaceholder": {
+    "message": "请输入认证字符串"
+  },
+  "otherParams": {
+    "message": "额外参数"
+  },
+  "otherParamsPlaceholder": {
+    "message": "请输入json字符串"
+  },
+  "releaseTip": {
+    "message": "为了防止被滥用，新增配置必须点击校验，通过测试后保存。发布接口校验说明"
+  },
+  "delete": {
+    "message": "删除"
+  },
+  "releaseAdd": {
+    "message": "添加发布配置"
+  },
+  "history": {
+    "message": "错误历史"
+  },
+  "historyDescription": {
+    "message": "使用中发布失败的记录会出现在此处。<br\/>此处的记录只保留20条，且当您点击下发列表点击条目则该条目会在列表删除。"
+  },
+  "browserPage": {
+    "message": "访问该页面"
+  },
+  "releaseTo": {
+    "message": "发布至"
+  },
+  "releaseToError": {
+    "message": "失败"
+  },
+  "releaseUrlResponseError": {
+    "message": "接口响应非法，接口需要返回json对象，并包含 code和msg 字段"
+  },
+  "releaseUrlTestError": {
+    "message": "请求发布接口失败，请检查网络，或接口服务器异常"
+  },
+  "reprintTo": {
+    "message": "转载至："
+  },
+  "reprint": {
+    "message": "转载"
+  },
+  "reprintRun": {
+    "message": "转载中..."
+  },
+  "moreOptions": {
+    "message": "更多选型"
+  },
+  "reward": {
+    "message": "打赏"
+  }
+}

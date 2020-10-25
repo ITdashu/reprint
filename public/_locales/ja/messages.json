@@ -1,0 +1,113 @@
+{
+  "extName": {
+    "message": "再版"
+  },
+  "extDescription": {
+    "message": "記事をどこにでも転載"
+  },
+  "extDocument": {
+    "message": "技術文書"
+  },
+  "config": {
+    "message": "セットアップ"
+  },
+  "configDescription": {
+    "message": "Reprintは、Webページの本文を自動的に抽出し、許可された場所に公開できます。 <br\/>ここでの設定に加えて、サーバーリリースインターフェイスも構成する必要があります。<a href=\"https:\/\/itdashu.com\/web_extension\/reprint.html\" target=\"_blank\">一般的なソフトウェアリリースを参照してください。プラグインおよびカスタムパブリッシングインターフェイスドッキングドキュメント<\/a>"
+  },
+  "sync": {
+    "message": "同期："
+  },
+  "alreadySync": {
+    "message": "同期を有効にする"
+  },
+  "enable": {
+    "message": "有効化"
+  },
+  "syncDescription": {
+    "message": "注意：同期オプションを正常に使用するには、すべてのデバイス（このデバイスを含む）でChromeブラウザーにログインする必要があります。 <br\/>他のデバイスでこのページを表示して、同期が有効かどうかを確認できます。"
+  },
+  "releaseConfig": {
+    "message": "構成の公開"
+  },
+  "releaseDescription": {
+    "message": "ユーザーが再印刷要求を受け入れて保存操作を実行するためのインターフェースを提供する必要があります。 <br\/>参照：<a href=\"https:\/\/itdashu.com\/web_extension\/reprint.html\">一般的に使用されるソフトウェア公開プラグインまたはカスタム公開インターフェイスドッキングドキュメント<\/a>"
+  },
+  "inputName": {
+    "message": "名前を入力してください"
+  },
+  "inputRun": {
+    "message": "保存しています..."
+  },
+  "alreadySave": {
+    "message": "保存しました"
+  },
+  "TestAndSave": {
+    "message": "テストして保存"
+  },
+  "defaultRelease": {
+    "message": "デフォルトリリース"
+  },
+  "releaseUrl": {
+    "message": "公開アドレス"
+  },
+  "releasePlaceholder": {
+    "message": "https:\/\/itdashu.comなどの公開アドレスを入力してください。"
+  },
+  "releaseAuth": {
+    "message": "AUTH認証文字列"
+  },
+  "releaseAuthPlaceholder": {
+    "message": "認証文字列を入力してください"
+  },
+  "otherParams": {
+    "message": "追加のパラメーター"
+  },
+  "otherParamsPlaceholder": {
+    "message": "json文字列を入力してください"
+  },
+  "releaseTip": {
+    "message": "悪用を防ぐために、テストに合格した後、新しく追加された構成を確認して保存する必要があります。インターフェース検証手順のリリース"
+  },
+  "delete": {
+    "message": "削除"
+  },
+  "releaseAdd": {
+    "message": "リリース構成を追加する"
+  },
+  "history": {
+    "message": "エラー履歴"
+  },
+  "historyDescription": {
+    "message": "使用中に公開できなかったレコードがここに表示されます。 <br\/>保存されているレコードは20件のみで、リリースリストのアイテムをクリックすると、そのアイテムはリストから削除されます。"
+  },
+  "browserPage": {
+    "message": "このページにアクセス"
+  },
+  "releaseTo": {
+    "message": "に公開"
+  },
+  "releaseToError": {
+    "message": "失敗"
+  },
+  "releaseUrlResponseError": {
+    "message": "インターフェイスの応答は不正です。インターフェイスはjsonオブジェクトを返す必要があり、コードフィールドとメッセージフィールドが含まれています"
+  },
+  "releaseUrlTestError": {
+    "message": "インターフェイスの公開リクエストに失敗しました。ネットワークまたはインターフェイスサーバーが異常であることを確認してください"
+  },
+  "reprintTo": {
+    "message": "転載先："
+  },
+  "reprint": {
+    "message": "再版"
+  },
+  "reprintRun": {
+    "message": "再版..."
+  },
+  "moreOptions": {
+    "message": "より多くのオプション"
+  },
+  "reward": {
+    "message": "褒賞"
+  }
+}

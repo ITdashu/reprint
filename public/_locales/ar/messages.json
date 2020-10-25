@@ -1,0 +1,113 @@
+{
+  "extName": {
+    "message": "طبع"
+  },
+  "extDescription": {
+    "message": "أعد طباعة المقال في أي مكان"
+  },
+  "extDocument": {
+    "message": "الوثائق الفنية"
+  },
+  "config": {
+    "message": "اقامة"
+  },
+  "configDescription": {
+    "message": "يمكن لإعادة الطباعة استخراج نص صفحة الويب تلقائيًا ونشرها في أي مكان تسمح به. <br\/> بالإضافة إلى الإعدادات هنا ، يجب أيضًا تهيئة واجهة النشر من جانب الخادم ، راجع: <a href=\"https:\/\/itdashu.com\/web_extension\/reprint.html\" target=\"_blank\"> نشر البرامج الشائعة مستند إرساء لواجهة نشر مخصصة ومكوّن إضافي <\/a>"
+  },
+  "sync": {
+    "message": "تزامن:"
+  },
+  "alreadySync": {
+    "message": "تمكين المزامنة"
+  },
+  "enable": {
+    "message": "مفعل"
+  },
+  "syncDescription": {
+    "message": "يرجى ملاحظة ما يلي: تحتاج إلى تسجيل الدخول إلى متصفح Chrome على جميع الأجهزة (بما في ذلك هذا الجهاز) حتى يمكن استخدام خيارات المزامنة بشكل طبيعي. <br\/> يمكنك عرض هذه الصفحة على أجهزة أخرى للتحقق مما إذا كانت المزامنة سارية المفعول."
+  },
+  "releaseConfig": {
+    "message": "نشر التكوين"
+  },
+  "releaseDescription": {
+    "message": "يجب توفير واجهة للمستخدمين لقبول طلبات إعادة الطباعة وتنفيذ عمليات الحفظ. <br\/> راجع: <a href=\"https:\/\/itdashu.com\/web_extension\/reprint.html\"> المكونات الإضافية لنشر البرامج شائعة الاستخدام أو مستندات إرساء واجهة النشر المخصصة <\/a>"
+  },
+  "inputName": {
+    "message": "الرجاء إدخال اسم"
+  },
+  "inputRun": {
+    "message": "إنقاذ..."
+  },
+  "alreadySave": {
+    "message": "تم الحفظ"
+  },
+  "TestAndSave": {
+    "message": "اختبر واحفظ"
+  },
+  "defaultRelease": {
+    "message": "الإصدار الافتراضي"
+  },
+  "releaseUrl": {
+    "message": "نشر العنوان"
+  },
+  "releasePlaceholder": {
+    "message": "الرجاء إدخال عنوان النشر مثل: https:\/\/itdashu.com .."
+  },
+  "releaseAuth": {
+    "message": "سلسلة مصادقة AUTH"
+  },
+  "releaseAuthPlaceholder": {
+    "message": "الرجاء إدخال سلسلة المصادقة"
+  },
+  "otherParams": {
+    "message": "معلمات اضافية"
+  },
+  "otherParamsPlaceholder": {
+    "message": "الرجاء إدخال سلسلة json"
+  },
+  "releaseTip": {
+    "message": "من أجل منع إساءة الاستخدام ، يجب فحص التكوين المضاف حديثًا وحفظه بعد اجتياز الاختبار. حرر تعليمات التحقق من الواجهة"
+  },
+  "delete": {
+    "message": "حذف"
+  },
+  "releaseAdd": {
+    "message": "إضافة تكوين الإصدار"
+  },
+  "history": {
+    "message": "سجل الأخطاء"
+  },
+  "historyDescription": {
+    "message": "ستظهر هنا السجلات التي فشل نشرها قيد الاستخدام. <br\/> لا يوجد سوى 20 سجلاً محتفظًا بها ، وعند النقر فوق العنصر الموجود في قائمة الإصدار ، سيتم حذف العنصر من القائمة."
+  },
+  "browserPage": {
+    "message": "قم بزيارة هذه الصفحة"
+  },
+  "releaseTo": {
+    "message": "انشر إلى"
+  },
+  "releaseToError": {
+    "message": "بالفشل"
+  },
+  "releaseUrlResponseError": {
+    "message": "استجابة الواجهة غير قانونية ، وتحتاج الواجهة إلى إرجاع كائن json ، وتحتوي على الكود وحقول msg"
+  },
+  "releaseUrlTestError": {
+    "message": "فشل طلب نشر الواجهة. الرجاء التحقق من الشبكة أو أن خادم الواجهة غير طبيعي"
+  },
+  "reprintTo": {
+    "message": "أعيد طبعه إلى:"
+  },
+  "reprint": {
+    "message": "طبع"
+  },
+  "reprintRun": {
+    "message": "إعادة الطباعة ..."
+  },
+  "moreOptions": {
+    "message": "المزيد من الخيارات"
+  },
+  "reward": {
+    "message": "مكافأة"
+  }
+}

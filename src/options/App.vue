@@ -15,43 +15,42 @@
         <img alt="help"
              src="/icons/help.png">
         <a href="#">
-          技术文档
+          {{ lang('extDocument') }}
         </a>
       </div>
     </aside>
     <div class="content flex-width-auto">
       <div v-show="currentTab === 'config'">
-        <h2>设置</h2>
-        <p>
-          Reprint可以自动提取网页正文，并发布到您允许的任何地方。<br />
-          除了此处的设置，您还应该配置好服务端的发布接口，参看：<a href="#">常用软件发布插件</a>或<a href="#">自定义发布接口对接文档</a>
+        <h2>{{ lang('config') }}</h2>
+        <p v-html="lang('configDescription')">
         </p>
         <div class="card">
           <div class="flex">
             <div class="left">
-              <img alt="sync" src="/icons/sync.png" />
+              <img alt="sync"
+                   src="/icons/sync.png"/>
               <h3>
-                <b>同步：</b>
-                <span>已启用</span>
+                <b>{{ lang('sync') }}</b>
+                <span>{{ lang('enable') }}</span>
               </h3>
             </div>
             <div>
-              <button>启用同步</button>
+              <button>{{ lang('alreadySync') }}</button>
             </div>
           </div>
-          <p>
-            请注意：您需要在所有设备上（包括此设备）的Chrome浏览器中登录，这样同步的选项才能正常使用。<br />
-            可以在其他设备上查看此页面，来检查同步是否生效。
+          <p v-html="lang('syncDescription')">
           </p>
         </div>
       </div>
       <div v-show="currentTab === 'release'">
         <div class="header">
           <img src="/icons/logo.svg">
-          <b>Release</b><span>（转载网页到任何地方）</span>
+          <b>{{ lang('extName') }}</b><span>{{ lang('extDescription') }}</span>
         </div>
         <div class="release-list-layout">
-          <h2>配置</h2>
+          <h2>{{ lang('releaseConfig') }}</h2>
+          <p v-html="lang('releaseDescription')">
+          </p>
           <div class="release-list">
             <div class="item card"
                  v-for="index in Object.keys(releaseConfig)"
@@ -61,13 +60,21 @@
                   <input class="ghost"
                          type="text"
                          v-model="releaseConfig[index].name"
-                         placeholder="请输入名称">
+                         :placeholder="lang('inputName')">
                 </label>
-                <button @click="saveRelease(index)">测试后保存</button>
+                <button @click="saveRelease(index)"
+                        :disabled="saveRun.hasOwnProperty(index)">
+                  <template v-if="saveRun.hasOwnProperty(index)">
+                    {{ lang('inputRun') }}
+                  </template>
+                  <template v-else>
+                    {{ successSave.indexOf(index) > -1 ? lang('alreadySave') : lang('TestAndSave') }}
+                  </template>
+                </button>
               </div>
               <section>
                 <div class="input-item flex">
-                  <span>默认发布</span>
+                  <span>{{ lang('defaultRelease') }}</span>
                   <label class="flex-width-auto">
                     <input type="checkbox"
                            v-model="releaseConfig[index].default"
@@ -75,39 +82,43 @@
                   </label>
                 </div>
                 <div class="input-item flex">
-                  <span>发布地址</span>
+                  <span>{{ lang('releaseUrl') }}</span>
                   <label class="flex-width-auto">
                     <input class="ghost"
                            type="text"
                            v-model="releaseConfig[index].url"
-                           placeholder="请输入发布地址，如：https://itdashu.com..">
+                           :placeholder="lang('releasePlaceholder')">
                   </label>
                 </div>
                 <div class="input-item flex">
-                  <span>AUTH 认证字符串</span>
+                  <span>{{ lang('releaseAuth') }}</span>
                   <label class="flex-width-auto">
                     <input class="ghost"
                            type="text"
                            v-model="releaseConfig[index].salt"
-                           placeholder="请输入认证字符串">
+                           :placeholder="lang('releaseAuthPlaceholder')">
                   </label>
                 </div>
                 <div class="input-item flex">
-                  <span>额外参数</span>
+                  <span>{{ lang('otherParams') }}</span>
                   <label class="flex-width-auto">
                 <textarea class="ghost"
                           v-model="releaseConfig[index].params"
-                          placeholder="请输入json字符串"></textarea>
+                          :placeholder="lang('otherParamsPlaceholder')"></textarea>
                   </label>
                 </div>
-                <div class="msg input-item"
-                     v-if="!releaseData.hasOwnProperty(index)">
-                  为了防止被滥用，新增配置必须点击校验，通过测试后保存。发布接口校验说明
-                </div>
-                <div class="input-item footer-action"
-                     v-else>
+                <div class="msg input-item flex">
+                  <div class="flex-width-auto error-msg">
+                    <template v-if="errorSave.hasOwnProperty(index)">
+                      {{ errorSave[index] }}
+                    </template>
+                    <template v-else-if="!releaseData.hasOwnProperty(index)">
+                      {{ lang('releaseTip') }}
+                    </template>
+                  </div>
                   <button class="small"
-                          @click="releaseDelete(index)">删除
+                          @click="releaseDelete(index)">
+                    {{ lang('delete') }}
                   </button>
                 </div>
               </section>
@@ -115,31 +126,33 @@
           </div>
           <div class="add-btn-box">
             <button id="add"
-                    @click="releaseAdd">添加发布配置
+                    @click="releaseAdd">{{ lang('releaseAdd') }}
             </button>
           </div>
         </div>
       </div>
       <div v-show="currentTab === 'history'">
 
-        <h2>历史</h2>
-        <p>
-          使用中发布失败的记录会出现在此处。<br />
-          此处的记录只保留20条，且当您点击下发列表点击条目则该条目会在列表删除。
+        <h2>{{ lang('history') }}</h2>
+        <p v-html="lang('historyDescription')">
         </p>
-        <div class="card history-card">
+        <div class="card history-card"
+             v-for="(item,index) in historyData"
+             :key="index">
           <div class="flex">
             <div class="left">
-              <h3>可以在其他设备上查看此页面，来检查同步是否生效</h3>
+              <h3>{{ item.title }}</h3>
             </div>
             <div class="right">
-              <button>访问该页面</button>
+              <button>{{ lang('browserPage') }}</button>
             </div>
           </div>
           <p class="card-content">
-            <span>https://baidu.com/sdfsdkw/sdi?sdf</span><br />
-            <span>2020/10/12 21:19:05</span>
-            发布至<b>OSCE官网</b>时失败
+            <span>{{ item.url }}</span><br/>
+            <span>{{ item.time }}</span>
+            {{ lang('releaseTo') }}<b>{{ item.configName }}</b>{{ lang('releaseToError') }}
+            <br/>
+            <span>{{ item.msg }}</span>
           </p>
         </div>
       </div>
@@ -148,104 +161,150 @@
 </template>
 
 <script>
+import Axios from 'axios'
+import common from "@/common";
 
-  export default {
-    name: 'App',
-    data() {
-      return {
-        releaseKey: 'reprint_release',
-        currentTab: 'config',
-        tabs: [
-          {
-            icon: '/icons/config.png',
-            activeIcon: '/icons/config-active.png',
-            name: '配置',
-            id: 'config'
-          },
-          {
-            icon: '/icons/release.png',
-            activeIcon: '/icons/release-active.png',
-            name: '发布接口',
-            id: 'release'
-          },
-          {
-            icon: '/icons/history.png',
-            activeIcon: '/icons/history-active.png',
-            name: '错误历史',
-            id: 'history'
-          }
-        ],
-        releaseConfig: {},
-        releaseData: {}
+export default {
+  name: 'App',
+  mixins: [common],
+  data() {
+    return {
+      releaseKey: 'reprint_release',
+      currentTab: 'config',
+      successSave: [],
+      saveRun: {},
+      errorSave: {},
+      historyKey: 'reprint_history',
+      historyData: [],
+      tabs: [
+        {
+          icon: '/icons/config.png',
+          activeIcon: '/icons/config-active.png',
+          name: this.lang('config'),
+          id: 'config'
+        },
+        {
+          icon: '/icons/release.png',
+          activeIcon: '/icons/release-active.png',
+          name: this.lang('releaseConfig'),
+          id: 'release'
+        },
+        {
+          icon: '/icons/history.png',
+          activeIcon: '/icons/history-active.png',
+          name: this.lang('history'),
+          id: 'history'
+        }
+      ],
+      releaseConfig: {},
+      releaseData: {}
+    }
+  },
+  mounted() {
+    this.getRelease()
+    this.getHistory()
+  },
+  methods: {
+    randomString(len = 32) {
+      len = len || 32;
+      let chars = 'ABCDEFGHJKMNPQRSTWXYZOLVU1234567890';
+      /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+      let maxPos = chars.length;
+      let output = '';
+      for (let i = 0; i < len; i++) {
+        output += chars.charAt(Math.floor(Math.random() * maxPos));
       }
-    },
-    mounted() {
-      this.getRelease()
-    },
-    methods: {
-      randomString(len=32) {
-        len = len || 32;
-        let chars = 'ABCDEFGHJKMNPQRSTWXYZOLVU1234567890';
-        /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
-        let maxPos = chars.length;
-        let output = '';
-        for (let i = 0; i < len; i++) {
-          output += chars.charAt(Math.floor(Math.random() * maxPos));
-        }
-        if(this.releaseConfig.hasOwnProperty(output)){
-          return this.randomString(len)
-        }
-        return output;
-      },
-      releaseDelete(index) {
-        console.log('开始删除')
-        this.$delete(this.releaseConfig,index)
-        if(this.releaseData.hasOwnProperty(index)){
-          this.$delete(this.releaseData,index)
-        }
-        this.saveConfig(this.releaseKey, this.releaseData)
-      },
-      saveRelease(index) {
-        console.log('触发保存')
-        let release = JSON.parse(JSON.stringify(this.releaseConfig))
-        console.log(release)
-        this.$set(this.releaseData,index,release[index])
-        this.saveConfig(this.releaseKey,this.releaseData)
-      },
-      saveConfig(key, data) {
-        let options = {}
-        options[key] = JSON.stringify(data)
-        console.log('保存前',options)
-        browser.storage.local.set(options).then(res => {
-          console.log('保存成功')
-        })
-      },
-      releaseAdd() {
-        let id = this.randomString()
-        this.$set(this.releaseConfig,id,{
-          name: '',
-          url: '',
-          default: false,
-          salt: '',
-          params: ''
-        })
-        console.log('新增后',this.releaseConfig)
-      },
-      getRelease() {
-        browser.storage.local.get(this.releaseKey).then(data => {
-          if(data.hasOwnProperty(this.releaseKey)){
-            data = JSON.parse(data[this.releaseKey])
-          }else{
-            data = {}
-          }
-          this.releaseConfig = JSON.parse(JSON.stringify(data))
-          this.releaseData = data
-        })
+      if (this.releaseConfig.hasOwnProperty(output)) {
+        return this.randomString(len)
       }
+      return output;
+    },
+    releaseDelete(index) {
+      console.log('开始删除')
+      this.$delete(this.releaseConfig, index)
+      if (this.releaseData.hasOwnProperty(index)) {
+        this.$delete(this.releaseData, index)
+      }
+      this.saveConfig(this.releaseKey, this.releaseData)
+    },
+    saveRelease(index) {
+      console.log('触发保存')
+      this.$set(this.saveRun, index, true)
+
+      Axios.post(this.releaseConfig[index].url, {
+        salt: this.releaseConfig[index].salt,
+        title: 'Reprint test',
+        content: 'Reprint the article anywhere',
+        description: 'Reprint the article anywhere',
+        siteName: 'ITDaShu',
+        url: 'https://itdashu.com'
+      }).then(({data}) => {
+        console.log('保存成功', data)
+        if (typeof data === 'object' && data.hasOwnProperty('code') && data.hasOwnProperty('msg')) {
+          let release = JSON.parse(JSON.stringify(this.releaseConfig))
+          console.log(release)
+          this.$set(this.releaseData, index, release[index])
+          this.saveConfig(this.releaseKey, this.releaseData)
+          this.successSave.push(index)
+          if (this.errorSave.hasOwnProperty(index)) {
+            this.$delete(this.errorSave, index)
+          }
+        } else {
+          this.$set(this.errorSave, index, this.lang('releaseUrlResponseError'))
+        }
+        this.$delete(this.saveRun, index)
+      }).catch(() => {
+        this.$delete(this.saveRun, index)
+        console.log('保持失败')
+        this.$set(this.errorSave, index, this.lang('releaseUrlTestError'))
+      })
+    },
+    saveConfig(key, data) {
+      let options = {}
+      options[key] = JSON.stringify(data)
+      console.log('保存前', options)
+      browser.storage.local.set(options).then(res => {
+        console.log('保存成功')
+      })
+    },
+    releaseAdd() {
+      let id = this.randomString()
+      this.$set(this.releaseConfig, id, {
+        name: '',
+        url: '',
+        default: false,
+        salt: '',
+        params: ''
+      })
+      console.log('新增后', this.releaseConfig)
+    },
+    getRelease() {
+      browser.storage.local.get(this.releaseKey).then(data => {
+        if (data.hasOwnProperty(this.releaseKey)) {
+          data = JSON.parse(data[this.releaseKey])
+        } else {
+          data = {}
+        }
+        this.releaseConfig = JSON.parse(JSON.stringify(data))
+        this.releaseData = data
+      })
+    },
+    getHistory() {
+      browser.storage.local.get(this.historyKey).then(data => {
+        console.log('拿到的数据', data)
+        if (data.hasOwnProperty(this.historyKey)) {
+          data = JSON.parse(data[this.historyKey])
+        } else {
+          data = {}
+        }
+
+        this.historyData = data
+      })
     }
   }
+}
 </script>
 
 <style lang="scss">
-  @import "options";
+@import "options";
 </style>

@@ -1,0 +1,113 @@
+{
+  "extName": {
+    "message": "Dotisk"
+  },
+  "extDescription": {
+    "message": "Dotisk článku kdekoli"
+  },
+  "extDocument": {
+    "message": "Technické podklady"
+  },
+  "config": {
+    "message": "Založit"
+  },
+  "configDescription": {
+    "message": "Dotisk může automaticky extrahovat hlavní část webové stránky a publikovat ji na libovolném místě, které povolíte. <br\/> Kromě zde uvedených nastavení byste měli nakonfigurovat také rozhraní pro publikování na straně serveru, viz: <a href=\"https:\/\/itdashu.com\/web_extension\/reprint.html\" target=\"_blank\"> Běžné publikování softwaru Dokovací modul modulu plug-in a vlastního publikačního rozhraní <\/a>"
+  },
+  "sync": {
+    "message": "Synchronizovat:"
+  },
+  "alreadySync": {
+    "message": "Povolit synchronizaci"
+  },
+  "enable": {
+    "message": "aktivován"
+  },
+  "syncDescription": {
+    "message": "Poznámka: Chcete-li možnosti synchronizace používat normálně, musíte se přihlásit do prohlížeče Chrome na všech zařízeních (včetně tohoto zařízení). <br\/> Tuto stránku můžete zobrazit na jiných zařízeních a zkontrolovat, zda se synchronizace projeví."
+  },
+  "releaseConfig": {
+    "message": "Publikovat konfiguraci"
+  },
+  "releaseDescription": {
+    "message": "Měli byste poskytnout rozhraní, aby uživatelé mohli přijímat požadavky na dotisk a provádět operace ukládání. <br\/> Viz: <a href=\"https:\/\/itdashu.com\/web_extension\/reprint.html\"> Běžně používané doplňky pro publikování softwaru nebo dokovací dokumenty vlastního rozhraní pro publikování <\/a>"
+  },
+  "inputName": {
+    "message": "Zadejte prosím jméno"
+  },
+  "inputRun": {
+    "message": "ukládání ..."
+  },
+  "alreadySave": {
+    "message": "Uložené"
+  },
+  "TestAndSave": {
+    "message": "Otestujte a uložte"
+  },
+  "defaultRelease": {
+    "message": "Výchozí vydání"
+  },
+  "releaseUrl": {
+    "message": "Publikovat adresu"
+  },
+  "releasePlaceholder": {
+    "message": "Zadejte prosím publikační adresu, například: https:\/\/itdashu.com .."
+  },
+  "releaseAuth": {
+    "message": "AUTHING autentizační řetězec"
+  },
+  "releaseAuthPlaceholder": {
+    "message": "Zadejte ověřovací řetězec"
+  },
+  "otherParams": {
+    "message": "Další parametry"
+  },
+  "otherParamsPlaceholder": {
+    "message": "Zadejte řetězec JSON"
+  },
+  "releaseTip": {
+    "message": "Aby se zabránilo zneužití, musí být nově přidaná konfigurace zkontrolována a uložena po absolvování testu. Vydejte pokyny k ověření rozhraní"
+  },
+  "delete": {
+    "message": "vymazat"
+  },
+  "releaseAdd": {
+    "message": "Přidejte konfiguraci vydání"
+  },
+  "history": {
+    "message": "Historie chyb"
+  },
+  "historyDescription": {
+    "message": "Zde se zobrazí záznamy, které se nepodařilo publikovat. <br\/> Zde je vedeno pouze 20 záznamů a po kliknutí na položku v seznamu vydání bude položka ze seznamu odstraněna."
+  },
+  "browserPage": {
+    "message": "Navštivte tuto stránku"
+  },
+  "releaseTo": {
+    "message": "Publikovat do"
+  },
+  "releaseToError": {
+    "message": "selhání"
+  },
+  "releaseUrlResponseError": {
+    "message": "Odpověď rozhraní je nelegální, rozhraní musí vrátit objekt JSON a obsahuje pole kódu a zprávy"
+  },
+  "releaseUrlTestError": {
+    "message": "Požadavek na publikování rozhraní se nezdařil, zkontrolujte síť nebo je server rozhraní neobvyklý"
+  },
+  "reprintTo": {
+    "message": "Dotisk:"
+  },
+  "reprint": {
+    "message": "Dotisk"
+  },
+  "reprintRun": {
+    "message": "Dotisk ..."
+  },
+  "moreOptions": {
+    "message": "Více možností"
+  },
+  "reward": {
+    "message": "Odměna"
+  }
+}

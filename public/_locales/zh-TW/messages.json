@@ -1,0 +1,113 @@
+{
+  "extName": {
+    "message": "Reprint"
+  },
+  "extDescription": {
+    "message": "轉載文章到任何地方"
+  },
+  "extDocument": {
+    "message": "技術文檔"
+  },
+  "config": {
+    "message": "設置"
+  },
+  "configDescription": {
+    "message": "Reprint可以自動提取網頁正文，並發佈到您允許的任何地方。 <br\/>除了此處的設置，您還應該配置好服務端的發布接口，參看：<a href=\"https:\/\/itdashu.com\/web_extension\/reprint.html\" target=\"_blank\">常用軟件發布插件和自定義發布接口對接文檔<\/a>"
+  },
+  "sync": {
+    "message": "同步："
+  },
+  "alreadySync": {
+    "message": "啟用同步"
+  },
+  "enable": {
+    "message": "已啟用"
+  },
+  "syncDescription": {
+    "message": "請注意：您需要在所有設備上（包括此設備）的Chrome瀏覽器中登錄，這樣同步的選項才能正常使用。 <br\/>可以在其他設備上查看此頁面，來檢查同步是否生效。"
+  },
+  "releaseConfig": {
+    "message": "發布配置"
+  },
+  "releaseDescription": {
+    "message": "您應該提供一個接口用戶接受Reprint發起請求，執行保存操作。 <br\/>參看：<a href=\"https:\/\/itdashu.com\/web_extension\/reprint.html\">常用軟件發布插件或自定義發布接口對接文檔<\/a>"
+  },
+  "inputName": {
+    "message": "請輸入名稱"
+  },
+  "inputRun": {
+    "message": "保存中..."
+  },
+  "alreadySave": {
+    "message": "已保存"
+  },
+  "TestAndSave": {
+    "message": "測試並保存"
+  },
+  "defaultRelease": {
+    "message": "默認發布"
+  },
+  "releaseUrl": {
+    "message": "發布地址"
+  },
+  "releasePlaceholder": {
+    "message": "請輸入發布地址，如：https:\/\/itdashu.com.."
+  },
+  "releaseAuth": {
+    "message": "AUTH 認證字符串"
+  },
+  "releaseAuthPlaceholder": {
+    "message": "請輸入認證字符串"
+  },
+  "otherParams": {
+    "message": "額外參數"
+  },
+  "otherParamsPlaceholder": {
+    "message": "請輸入json字符串"
+  },
+  "releaseTip": {
+    "message": "為了防止被濫用，新增配置必須點擊校驗，通過測試後保存。發布接口校驗說明"
+  },
+  "delete": {
+    "message": "刪除"
+  },
+  "releaseAdd": {
+    "message": "添加發布配置"
+  },
+  "history": {
+    "message": "錯誤歷史"
+  },
+  "historyDescription": {
+    "message": "使用中發布失敗的記錄會出現在此處。 <br\/>此處的記錄只保留20條，且當您點擊下發列表點擊條目則該條目會在列表刪除。"
+  },
+  "browserPage": {
+    "message": "訪問該頁面"
+  },
+  "releaseTo": {
+    "message": "發布至"
+  },
+  "releaseToError": {
+    "message": "失敗"
+  },
+  "releaseUrlResponseError": {
+    "message": "接口響應非法，接口需要返回json對象，並包含 code和msg 字段"
+  },
+  "releaseUrlTestError": {
+    "message": "請求發布接口失敗，請檢查網絡，或接口服務器異常"
+  },
+  "reprintTo": {
+    "message": "轉載至："
+  },
+  "reprint": {
+    "message": "轉載"
+  },
+  "reprintRun": {
+    "message": "轉載中..."
+  },
+  "moreOptions": {
+    "message": "更多選型"
+  },
+  "reward": {
+    "message": "打賞"
+  }
+}
